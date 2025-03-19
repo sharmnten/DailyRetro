@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RetroDailyChallenge - A new arcade game challenge every day">
+  <title>Retro Daily - A New Arcade Challenge Every Day</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    /* Custom scrollbar for retro feel */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #1A1A2E; 
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #8C3FFF; 
+      border: 2px solid #1A1A2E;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FFD166; 
+    }
+    
+    /* Custom styles that need to be global */
+    .arcade-scanline {
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.03) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      background-size: 100% 4px;
+      pointer-events: none;
+    }
+
+    .arcade-glare {
+      background: radial-gradient(
+        ellipse at center,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 60%
+      );
+      pointer-events: none;
+    }
+    
+    .pixel-divider {
+      height: 4px;
+      background-image: linear-gradient(to right, #1A1A2E 50%, transparent 50%);
+      background-size: 8px 4px;
+    }
+    
+    /* For game canvas */
+    .image-rendering-pixelated {
+      image-rendering: pixelated;
+    }
+    
+    /* For background gradients */
+    .bg-radial-gradient {
+      background: radial-gradient(
+        ellipse at center,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 60%
+      );
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
